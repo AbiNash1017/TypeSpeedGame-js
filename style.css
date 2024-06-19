@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Sogdian&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Noto Sans Sogdian", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #ece8ea;
+    background-image: url(bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    color: #ffffff;
+    font-size: 50px;
+    padding-top: 12px;
+    margin-bottom: 25px;
+}
+
+.background-text {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 7px;
+    padding-bottom: 10px;
+}
+
+.continer {
+    padding: 10px;
+    width: 100%;
+    max-width: 600px;
+    background-color: rgba(255, 255, 255, 0.737);
+    border-radius: 25px;
+}
+
+.continer input {
+    z-index: -10;
+    position: absolute;
+    opacity: 0;
+}
+
+#pg {
+    background-color: #ece8ea;
+    color: rgb(53, 48, 48);
+    font-size: 18px;
+    font-weight: 700;
+    word-break: break-all;
+    letter-spacing: 1px;
+    text-align: justify;
+}
+#pg span{
+    position: relative;
+}
+#pg span.correct{
+    color: green;
+}
+#pg span.incorrect{
+    color: red;
+}
+
+#pg span.active::before {
+position: absolute;
+content: '';
+height: 5px;
+background-color: #f90ae1;
+width: 100%;
+bottom: 0;
+left: 0;
+opacity: 0.5;
+animation: blink 1s infinite ease-in-out;
+}
+@keyframes blink{
+    50%{
+        opacity: 1;
+    }
+}
+
+/* #pg::selection {
+    background-color: rgba(127, 255, 244, 0.769);
+    color: black;
+} */
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 0, 0.644);
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.results {
+    padding: 8px;
+    margin: 5px;
+    display: flex;
+    color: rgb(74, 24, 24);
+    font-weight: 800;
+    justify-content: space-between;
+    width: 75%;
+}
+
+.results p {
+    font-size: 15px;
+}
+
+.results span {
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    color: rgb(244, 77, 105);
+}
+
+.container button {
+    background-color: aqua;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 8px 15px;
+    margin: 0px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
